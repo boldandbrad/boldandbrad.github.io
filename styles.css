@@ -18,6 +18,30 @@ body {
   font-size: 1rem;
 }
 
+ul {
+  list-style: none;
+  padding: 0px;
+}
+
+ul li:before {
+  content: '-';
+  margin-left: 1em;
+}
+
+li {
+  margin-top: 0.25em;
+}
+
+a {
+  color: var(--ctp-mocha-mauve);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 .shell {
   color: var(--ctp-mocha-mauve);
   font-weight: 700;
@@ -38,34 +62,55 @@ body {
   display: inline-block;
   vertical-align: middle;
   width: 7ch;
-  animation: typing 1s steps(7);
+  animation: typing 1s steps(7) forwards;
+  animation-delay: 1s;
   white-space: nowrap;
   overflow: hidden;
-  color: var(--ctp-mocha-green);
+  color: transparent;
+  border-left: 10px solid var(--ctp-mocha-rosewater);
 }
 
 .whoami-output {
-  animation: appear 0s 1.25s forwards;
+  animation: appear 0s 2.25s forwards;
   visibility: hidden;
 }
 
-/* animations */
+.joke {
+  color: var(--ctp-mocha-surface2);
+}
 
+/* animations */
 @keyframes typing {
   0% {
     width: 0;
-    border-right: 10px solid var(--ctp-mocha-rosewater);
     color: var(--ctp-mocha-text);
+    border-left: 0;
+    border-right: 10px solid var(--ctp-mocha-rosewater);
   }
+
+  99% {
+    color: var(--ctp-mocha-text);
+    border-right: 10px solid var(--ctp-mocha-rosewater);
+  }
+
   100% {
     width: 7ch;
-    border-right: 10px solid var(--ctp-mocha-rosewater);
-    color: var(--ctp-mocha-text);
+    color: var(--ctp-mocha-green);
+    border-left: 0;
+    border-right: 0;
+  }
+}
+
+@keyframes cmd-enter {
+  to {
+    border-color: transparent;
   }
 }
 
 @keyframes appear {
-  to { visibility: visible; }
+  to {
+    visibility: visible;
+  }
 }
 
 /* dynamic resizing */
