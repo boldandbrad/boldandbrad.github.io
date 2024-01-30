@@ -1,10 +1,14 @@
 @charset "UTF-8";
 
 /* import Catppuccin theme */
-@import url('https://unpkg.com/@catppuccin/palette/css/catppuccin.css');
+@import url("https://unpkg.com/@catppuccin/palette/css/catppuccin.css");
 
 /* import Anonymous Pro typeface */
-@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+html {
+  font-size: 16pt;
+}
 
 body {
   background: var(--ctp-mocha-base);
@@ -13,9 +17,6 @@ body {
   color: var(--ctp-mocha-text);
   min-height: 95vh;
   padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  font-size: 1rem;
 }
 
 ul {
@@ -24,12 +25,12 @@ ul {
 }
 
 ul li:before {
-  content: '-';
-  margin-left: 1em;
+  content: "-";
+  margin-left: 1rem;
 }
 
 li {
-  margin-top: 0.25em;
+  margin-top: 0.25rem;
 }
 
 a {
@@ -55,19 +56,18 @@ a:hover {
 .prompt {
   display: inline-block;
   color: var(--ctp-mocha-green);
-  font-size: 75%;
 }
 
 .typed-cmd {
   display: inline-block;
   vertical-align: middle;
   width: 7ch;
-  animation: typing 1s steps(7) forwards;
-  animation-delay: 1s;
   white-space: nowrap;
   overflow: hidden;
   color: transparent;
-  border-left: 10px solid var(--ctp-mocha-rosewater);
+  border-left: 1ch solid var(--ctp-mocha-rosewater);
+  animation: typing 1s steps(7) forwards;
+  animation-delay: 1s;
 }
 
 .whoami-output {
@@ -85,12 +85,12 @@ a:hover {
     width: 0;
     color: var(--ctp-mocha-text);
     border-left: 0;
-    border-right: 10px solid var(--ctp-mocha-rosewater);
+    border-right: 1ch solid var(--ctp-mocha-rosewater);
   }
 
   99% {
     color: var(--ctp-mocha-text);
-    border-right: 10px solid var(--ctp-mocha-rosewater);
+    border-right: 1ch solid var(--ctp-mocha-rosewater);
   }
 
   100% {
@@ -112,11 +112,3 @@ a:hover {
     visibility: visible;
   }
 }
-
-/* dynamic resizing */
-@media (min-width:600px) {
-  body {
-    font-size: 1.25rem;
-  }
-}
-
