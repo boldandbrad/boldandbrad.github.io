@@ -4,12 +4,74 @@
 @import url('https://unpkg.com/@catppuccin/palette/css/catppuccin.css');
 
 /* import Anonymous Pro typeface */
-@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 body {
-  background-color: var(--ctp-mocha-base);
+  background: var(--ctp-mocha-base);
   font-family: "Anonymous Pro", monospace;
   font-weight: 400;
   color: var(--ctp-mocha-text);
+  min-height: 95vh;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+}
+
+.shell {
+  color: var(--ctp-mocha-mauve);
+  font-weight: 700;
+}
+
+.cwd {
+  color: var(--ctp-mocha-blue);
+  font-weight: 700;
+}
+
+.prompt {
+  display: inline-block;
+  color: var(--ctp-mocha-green);
+  font-size: 75%;
+}
+
+.typed-cmd {
+  display: inline-block;
+  vertical-align: middle;
+  width: 7ch;
+  animation: typing 1s steps(7);
+  white-space: nowrap;
+  overflow: hidden;
+  color: var(--ctp-mocha-green);
+}
+
+.whoami-output {
+  animation: appear 0s 1.25s forwards;
+  visibility: hidden;
+}
+
+/* animations */
+
+@keyframes typing {
+  0% {
+    width: 0;
+    border-right: 10px solid var(--ctp-mocha-rosewater);
+    color: var(--ctp-mocha-text);
+  }
+  100% {
+    width: 7ch;
+    border-right: 10px solid var(--ctp-mocha-rosewater);
+    color: var(--ctp-mocha-text);
+  }
+}
+
+@keyframes appear {
+  to { visibility: visible; }
+}
+
+/* dynamic resizing */
+@media (min-width:600px) {
+  body {
+    font-size: 1.25rem;
+  }
 }
 
