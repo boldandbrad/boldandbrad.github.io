@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+/* import Catppuccin theme */
+@import url('https://unpkg.com/@catppuccin/palette/css/catppuccin.css');
+
+/* import Anonymous Pro typeface */
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap');
+
+body {
+  background-color: var(--ctp-mocha-base);
+  font-family: "Anonymous Pro", monospace;
+  font-weight: 400;
+  color: var(--ctp-mocha-text);
+}
+
