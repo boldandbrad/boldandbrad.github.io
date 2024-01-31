@@ -14,20 +14,27 @@
 /* global styles              */
 /*----------------------------*/
 
-html {
-  font-size: 16pt;
-}
-
-body {
-  position: absolute;
-  overflow: auto;
-  right: 0;
-  left: 0;
-  margin: 1rem;
+:root {
   background: var(--ctp-mocha-base);
   font-family: "Anonymous Pro", monospace;
   font-weight: 400;
+  font-size: 16pt;
   color: var(--ctp-mocha-text);
+}
+
+html,
+body {
+  margin: 0;
+}
+
+.content {
+  position: fixed;
+  overflow-y: scroll;
+  overflow-x: auto;
+  top: 0;
+  bottom: 1rem;
+  margin: 1rem 0 1rem 1rem;
+  padding-right: 1rem;
 }
 
 ::selection {
