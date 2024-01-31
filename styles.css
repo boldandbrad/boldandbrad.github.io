@@ -1,10 +1,18 @@
 @charset "UTF-8";
 
+/*----------------------------*/
+/* imports                    */
+/*----------------------------*/
+
 /* import Catppuccin theme */
 @import url("https://unpkg.com/@catppuccin/palette/css/catppuccin.css");
 
 /* import Anonymous Pro typeface */
 @import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+/*----------------------------*/
+/* global styles              */
+/*----------------------------*/
 
 html {
   font-size: 16pt;
@@ -22,6 +30,11 @@ body {
   color: var(--ctp-mocha-text);
 }
 
+::selection {
+  background: var(--ctp-mocha-yellow);
+  color: var(--ctp-mocha-base);
+}
+
 ul {
   list-style: none;
   padding: 0px;
@@ -37,21 +50,12 @@ li {
 }
 
 a {
-  color: var(--ctp-mocha-mauve);
   text-decoration: none;
   font-weight: 700;
 }
 
 a:hover {
   text-decoration: underline;
-}
-
-footer {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  margin: 0 1rem 1rem;
 }
 
 .shell {
@@ -81,40 +85,79 @@ footer {
   animation-delay: 1s;
 }
 
-.whoami-output {
-  animation: appear 0s 2.25s forwards;
+.cmd-output {
   visibility: hidden;
+  animation: appear 0s 2.25s forwards;
 }
 
-.joke {
+.cmd2-output {
+  visibility: hidden;
+  animation: appear 0s 4.5s forwards;
+}
+
+.subtext {
   color: var(--ctp-mocha-surface2);
 }
 
-.tmux-win-num {
-  background: var(--ctp-mocha-blue);
-  color: var(--ctp-mocha-surface0);
+/*----------------------------*/
+/* home tab                   */
+/*----------------------------*/
+
+.social-link > a {
+  color: var(--ctp-mocha-mauve);
 }
 
-.tmux-win-num-active {
-  background: var(--ctp-mocha-peach);
-  color: var(--ctp-mocha-surface0);
-}
-
-.tmux-win-title {
-  background: var(--ctp-mocha-surface0);
-  cursor: pointer;
-  user-select: none;
-}
-
-.tmux-win-title:hover {
-  background: var(--ctp-mocha-surface2);
-}
+/*----------------------------*/
+/* projects tab               */
+/*----------------------------*/
 
 #projects-tab {
   display: none;
 }
 
-/* animations */
+.project-link > a {
+  color: var(--ctp-mocha-blue);
+}
+
+/*----------------------------*/
+/* tmux-style navbar          */
+/*----------------------------*/
+
+footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: 0 1rem 1rem;
+}
+
+.nav-btn {
+  cursor: pointer;
+  user-select: none;
+}
+
+.nav-btn:hover > .nav-btn-title {
+  background: var(--ctp-mocha-surface2);
+}
+
+.nav-btn-id {
+  background: var(--ctp-mocha-blue);
+  color: var(--ctp-mocha-surface0);
+}
+
+.nav-btn-id-active {
+  background: var(--ctp-mocha-peach);
+  color: var(--ctp-mocha-surface0);
+}
+
+.nav-btn-title {
+  background: var(--ctp-mocha-surface0);
+}
+
+/*----------------------------*/
+/* animations                 */
+/*----------------------------*/
+
 @keyframes typing {
   0% {
     width: 0;

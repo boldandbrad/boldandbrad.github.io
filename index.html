@@ -4,35 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>boldandbrad</title>
-    <link rel="stylesheet" href="./styles.css" />
     <!-- import nerd font symbol classes -->
     <link
       rel="stylesheet"
       href="https://nerdfonts.com/assets/css/webfont.css"
     />
+    <link rel="stylesheet" href="./styles.css" />
     <script type="text/javascript" src="./script.js"></script>
   </head>
   <body>
     <div id="home-tab">
       <div>
-        <span>🍎 (</span
-        ><!--
-    --><span class="shell">zsh</span
-        ><!--
-    --><span>) at </span
-        ><!--
-    --><span class="cwd">~</span>
+        <span>🍎 (</span><span class="shell">zsh</span><span>) at </span
+        ><span class="cwd">~</span>
       </div>
       <div>
         <span><i class="nf nf-cod-arrow_right prompt"></i></span>
         <div class="typed-cmd">whoami</div>
       </div>
-      <div class="whoami-output">
+      <div class="cmd-output">
         <div>
           <span>boldandbrad</span>
-          <span class="joke"> ...more like, boolean operands (get it?)</span>
+          <span class="subtext"> ...more like, boolean operands (get it?)</span>
         </div>
-        <div class="about">
+        <div>
           <p>
             Hi 👋, my name is Brad. I'm a software developer and agile coach who
             enjoys building open source command line tools and helping others. I
@@ -45,9 +40,9 @@
             tinker with my modded GameCube. Feel free to reach out on socials:
           </p>
         </div>
-        <div class="links">
+        <div>
           <ul>
-            <li class="link">
+            <li class="social-link">
               <i class="nf nf-cod-github"></i>
               <a
                 href="https://github.com/boldandbrad"
@@ -57,7 +52,7 @@
                 GitHub
               </a>
             </li>
-            <li>
+            <li class="social-link">
               <i class="nf nf-cod-twitter"></i>
               <a
                 href="https://twitter.com/boldandbrad"
@@ -67,7 +62,7 @@
                 Twitter
               </a>
             </li>
-            <li>
+            <li class="social-link">
               <i class="nf nf-md-spotify"></i>
               <a
                 href="https://open.spotify.com/user/1219025914"
@@ -77,7 +72,7 @@
                 Spotify
               </a>
             </li>
-            <li>
+            <li class="social-link">
               <i class="nf nf-md-twitch"></i>
               <a
                 href="https://twitch.tv/boldandbrad"
@@ -88,51 +83,74 @@
               </a>
             </li>
             <!--
-        <li>
-          <i class="nf nf-md-discord"></i>
-          <a href="" alt="discord" target="_blank">
-            Discord
-          </a>
-        </li>
-        <li>
-          <i class="nf nf-md-youtube"></i>
-          <a href="" alt="youtube" target="_blank">
-            YouTube
-          </a>
-        </li>
-        -->
+              <li class="social-link">
+                <i class="nf nf-md-discord"></i>
+                <a href="" alt="discord" target="_blank">
+                  Discord
+                </a>
+              </li>
+              <li class="social-link">
+                <i class="nf nf-md-youtube"></i>
+                <a href="" alt="youtube" target="_blank">
+                  YouTube
+                </a>
+              </li>
+              -->
           </ul>
         </div>
       </div>
     </div>
     <div id="projects-tab">
       <div>
-        <span>🍎 (</span
-        ><!--
-    --><span class="shell">zsh</span
-        ><!--
-    --><span>) at </span
-        ><!--
-    --><span class="cwd">projects</span>
+        <span>🍎 (</span><span class="shell">zsh</span><span>) at </span
+        ><span class="cwd">projects</span>
       </div>
       <div>
         <span><i class="nf nf-cod-arrow_right prompt"></i></span>
         <div class="typed-cmd">ls -1</div>
       </div>
+      <div class="cmd-output">
+        <div class="project-link">
+          <a href="https://github.com/boldandbrad/euchre-cli" target="_blank"
+            >euchre-cli</a
+          >
+          <span class="subtext">- play euchre in your terminal</span>
+        </div>
+        <div class="project-link">
+          <a href="https://github.com/boldandbrad/makey-cli" target="_blank"
+            >makey-cli</a
+          >
+          <span class="subtext">- make passkeys in your terminal</span>
+        </div>
+        <div class="project-link">
+          <a href="https://github.com/boldandbrad/meeple-cli" target="_blank"
+            >meeple-cli</a
+          >
+          <span class="subtext"
+            >- manage board game collections in your terminal</span
+          >
+        </div>
+        <div class="project-link">
+          <a href="https://github.com/boldandbrad/mpl-cli" target="_blank"
+            >mpl-cli</a
+          >
+          <span class="subtext"
+            >- re-implementation of meeple-cli in rust (wip)</span
+          >
+        </div>
+      </div>
     </div>
+    <footer>
+      <!-- tmux-styled nav bar -->
+      <span class="nav-btn" onclick="show_home_tab()">
+        <span id="home-btn-id" class="nav-btn-id-active">&nbsp;1&nbsp;</span
+        ><span class="nav-btn-title">&nbsp;~&nbsp;</span></span
+      ><!--
+      --><span class="nav-btn" onclick="show_projects_tab()"
+        ><!--
+      --><span id="projects-btn-id" class="nav-btn-id">&nbsp;2&nbsp;</span
+        ><span class="nav-btn-title">&nbsp;projects&nbsp;</span>
+      </span>
+    </footer>
   </body>
-  <footer>
-    <!-- TODO: projects page should enter the command "ls -1" to display a list of project links -->
-    <!-- tmux windows -->
-    <span id="home-num" class="tmux-win-num-active">&nbsp;1&nbsp;</span
-    ><!--
-    --><span class="tmux-win-title" onclick="show_home_tab()"
-      >&nbsp;~&nbsp;</span
-    ><!--
-    --><span id="projects-num" class="tmux-win-num">&nbsp;2&nbsp;</span
-    ><!--
-    --><span class="tmux-win-title" onclick="show_projects_tab()"
-      >&nbsp;projects&nbsp;</span
-    >
-  </footer>
 </html>
