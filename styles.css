@@ -80,26 +80,9 @@ a:hover {
   color: var(--ctp-mocha-green);
 }
 
-.typed-cmd {
-  display: inline-block;
-  vertical-align: middle;
-  width: 7ch;
-  white-space: nowrap;
-  overflow: hidden;
-  color: transparent;
-  border-left: 1ch solid var(--ctp-mocha-rosewater);
-  animation: typing 1s steps(7) forwards;
-  animation-delay: 1s;
-}
-
 .cmd-output {
   visibility: hidden;
-  animation: appear 0s 2.25s forwards;
-}
-
-.cmd2-output {
-  visibility: hidden;
-  animation: appear 0s 4.5s forwards;
+  animation: appear 0s 2.5s forwards;
 }
 
 .subtext {
@@ -109,6 +92,18 @@ a:hover {
 /*----------------------------*/
 /* home tab                   */
 /*----------------------------*/
+
+.cmd-whoami {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 1ch solid var(--ctp-mocha-rosewater);
+  color: var(--ctp-mocha-text);
+  animation: cmd-type-6ch 1s steps(6) 1s forwards,
+    cmd-highlight 2s steps(1) forwards, cmd-enter 2.5s steps(1) forwards;
+}
 
 .social-link > a {
   color: var(--ctp-mocha-mauve);
@@ -120,6 +115,22 @@ a:hover {
 
 #projects-tab {
   display: none;
+}
+
+.cmd-ls--1 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 1ch solid var(--ctp-mocha-rosewater);
+  color: var(--ctp-mocha-text);
+  animation: cmd-type-5ch 1s steps(5) 1s forwards,
+    cmd-enter 2.5s steps(1) forwards;
+}
+
+.cmd-ls {
+  animation: cmd-highlight 1.5s steps(1) forwards;
 }
 
 .project-link > a {
@@ -165,30 +176,27 @@ footer {
 /* animations                 */
 /*----------------------------*/
 
-@keyframes typing {
-  0% {
-    width: 0;
-    color: var(--ctp-mocha-text);
-    border-left: 0;
-    border-right: 1ch solid var(--ctp-mocha-rosewater);
+@keyframes cmd-type-5ch {
+  to {
+    width: 5ch;
   }
+}
 
-  99% {
-    color: var(--ctp-mocha-text);
-    border-right: 1ch solid var(--ctp-mocha-rosewater);
+@keyframes cmd-type-6ch {
+  to {
+    width: 6ch;
   }
+}
 
-  100% {
-    width: 7ch;
+@keyframes cmd-highlight {
+  to {
     color: var(--ctp-mocha-green);
-    border-left: 0;
-    border-right: 0;
   }
 }
 
 @keyframes cmd-enter {
   to {
-    border-color: transparent;
+    border: 0;
   }
 }
 
