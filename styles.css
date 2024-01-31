@@ -43,6 +43,14 @@ a:hover {
   text-decoration: underline;
 }
 
+footer {
+  position: absolute;
+  box-sizing: border-box;
+  bottom: 0;
+  margin-bottom: 1rem;
+  background: var(--ctp-mocha-surface0);
+}
+
 .shell {
   color: var(--ctp-mocha-mauve);
   font-weight: 700;
@@ -77,6 +85,16 @@ a:hover {
 
 .joke {
   color: var(--ctp-mocha-surface2);
+}
+
+.tmux-win-num {
+  background: var(--ctp-mocha-blue);
+  color: var(--ctp-mocha-surface0);
+}
+
+.tmux-win-num-active {
+  background: var(--ctp-mocha-peach);
+  color: var(--ctp-mocha-surface0);
 }
 
 /* animations */
