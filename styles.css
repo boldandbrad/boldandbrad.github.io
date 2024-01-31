@@ -11,12 +11,15 @@ html {
 }
 
 body {
+  position: absolute;
+  overflow: auto;
+  right: 0;
+  left: 0;
+  margin: 1rem;
   background: var(--ctp-mocha-base);
   font-family: "Anonymous Pro", monospace;
   font-weight: 400;
   color: var(--ctp-mocha-text);
-  min-height: 95vh;
-  padding: 1rem;
 }
 
 ul {
@@ -44,11 +47,11 @@ a:hover {
 }
 
 footer {
-  position: absolute;
-  box-sizing: border-box;
+  position: fixed;
   bottom: 0;
-  margin-bottom: 1rem;
-  background: var(--ctp-mocha-surface0);
+  right: 0;
+  left: 0;
+  margin: 0 1rem 1rem;
 }
 
 .shell {
@@ -95,6 +98,10 @@ footer {
 .tmux-win-num-active {
   background: var(--ctp-mocha-peach);
   color: var(--ctp-mocha-surface0);
+}
+
+.tmux-win-title {
+  background: var(--ctp-mocha-surface0);
 }
 
 /* animations */
