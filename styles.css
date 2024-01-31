@@ -102,6 +102,16 @@ footer {
 
 .tmux-win-title {
   background: var(--ctp-mocha-surface0);
+  cursor: pointer;
+  user-select: none;
+}
+
+.tmux-win-title:hover {
+  background: var(--ctp-mocha-surface2);
+}
+
+#projects-tab {
+  display: none;
 }
 
 /* animations */

@@ -10,83 +10,84 @@
       rel="stylesheet"
       href="https://nerdfonts.com/assets/css/webfont.css"
     />
+    <script type="text/javascript" src="./script.js"></script>
   </head>
-  <style></style>
   <body>
-    <div>
-      <span>🍎 (</span
-      ><!--
-    --><span class="shell">zsh</span
-      ><!--
-    --><span>) at </span
-      ><!--
-    --><span class="cwd">~</span>
-    </div>
-    <div>
-      <span><i class="nf nf-cod-arrow_right prompt"></i></span>
-      <div class="typed-cmd">whoami</div>
-    </div>
-    <div class="whoami-output">
+    <div id="home-tab">
       <div>
-        <span>boldandbrad</span>
-        <span class="joke"> ...more like, boolean operands (get it?)</span>
+        <span>🍎 (</span
+        ><!--
+    --><span class="shell">zsh</span
+        ><!--
+    --><span>) at </span
+        ><!--
+    --><span class="cwd">~</span>
       </div>
-      <div class="about">
-        <p>
-          Hi 👋, my name is Brad. I'm a software developer and agile coach who
-          enjoys building open source command line tools and helping others. I
-          firmly believe that learning is a life long process. To that end, I am
-          constantly looking for new technologies to learn and projects to take
-          on. Today, I primarily build in python 🐍 and rust 🦀.
-        </p>
-        <p>
-          In my free time I play Minecraft with my partner, build Legos, and
-          tinker with my modded GameCube. Feel free to reach out on socials:
-        </p>
+      <div>
+        <span><i class="nf nf-cod-arrow_right prompt"></i></span>
+        <div class="typed-cmd">whoami</div>
       </div>
-      <div class="links">
-        <ul>
-          <li class="link">
-            <i class="nf nf-cod-github"></i>
-            <a
-              href="https://github.com/boldandbrad"
-              alt="github"
-              target="_blank"
-            >
-              GitHub
-            </a>
-          </li>
-          <li>
-            <i class="nf nf-cod-twitter"></i>
-            <a
-              href="https://twitter.com/boldandbrad"
-              alt="twitter"
-              target="_blank"
-            >
-              Twitter
-            </a>
-          </li>
-          <li>
-            <i class="nf nf-md-spotify"></i>
-            <a
-              href="https://open.spotify.com/user/1219025914"
-              alt="spotify"
-              target="_blank"
-            >
-              Spotify
-            </a>
-          </li>
-          <li>
-            <i class="nf nf-md-twitch"></i>
-            <a
-              href="https://twitch.tv/boldandbrad"
-              alt="twitch"
-              target="_blank"
-            >
-              Twitch
-            </a>
-          </li>
-          <!--
+      <div class="whoami-output">
+        <div>
+          <span>boldandbrad</span>
+          <span class="joke"> ...more like, boolean operands (get it?)</span>
+        </div>
+        <div class="about">
+          <p>
+            Hi 👋, my name is Brad. I'm a software developer and agile coach who
+            enjoys building open source command line tools and helping others. I
+            firmly believe that learning is a life long process. To that end, I
+            am constantly looking for new technologies to learn and projects to
+            take on. Today, I primarily build in python 🐍 and rust 🦀.
+          </p>
+          <p>
+            In my free time I play Minecraft with my partner, build Legos, and
+            tinker with my modded GameCube. Feel free to reach out on socials:
+          </p>
+        </div>
+        <div class="links">
+          <ul>
+            <li class="link">
+              <i class="nf nf-cod-github"></i>
+              <a
+                href="https://github.com/boldandbrad"
+                alt="github"
+                target="_blank"
+              >
+                GitHub
+              </a>
+            </li>
+            <li>
+              <i class="nf nf-cod-twitter"></i>
+              <a
+                href="https://twitter.com/boldandbrad"
+                alt="twitter"
+                target="_blank"
+              >
+                Twitter
+              </a>
+            </li>
+            <li>
+              <i class="nf nf-md-spotify"></i>
+              <a
+                href="https://open.spotify.com/user/1219025914"
+                alt="spotify"
+                target="_blank"
+              >
+                Spotify
+              </a>
+            </li>
+            <li>
+              <i class="nf nf-md-twitch"></i>
+              <a
+                href="https://twitch.tv/boldandbrad"
+                alt="twitch"
+                target="_blank"
+              >
+                Twitch
+              </a>
+            </li>
+            <!--
         <li>
           <i class="nf nf-md-discord"></i>
           <a href="" alt="discord" target="_blank">
@@ -99,18 +100,39 @@
             YouTube
           </a>
         </li>
-        --></ul>
+        -->
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="projects-tab">
+      <div>
+        <span>🍎 (</span
+        ><!--
+    --><span class="shell">zsh</span
+        ><!--
+    --><span>) at </span
+        ><!--
+    --><span class="cwd">projects</span>
+      </div>
+      <div>
+        <span><i class="nf nf-cod-arrow_right prompt"></i></span>
+        <div class="typed-cmd">ls -1</div>
       </div>
     </div>
   </body>
   <footer>
+    <!-- TODO: projects page should enter the command "ls -1" to display a list of project links -->
     <!-- tmux windows -->
-    <span class="tmux-win-num-active">&nbsp;1&nbsp;</span
+    <span id="home-num" class="tmux-win-num-active">&nbsp;1&nbsp;</span
     ><!--
-    --><span class="tmux-win-title">&nbsp;~&nbsp;</span>
-    <!-- TODO: figure out how to nav to another "page" via clicking the projects "tab" -->
-    <!-- projects page should enter the command "ls -1" to display a list of project links -->
-    <!-- <span class="tmux-win-num">&nbsp;2&nbsp;</span>
-    <span>projects&nbsp;</span> -->
+    --><span class="tmux-win-title" onclick="show_home_tab()"
+      >&nbsp;~&nbsp;</span
+    ><!--
+    --><span id="projects-num" class="tmux-win-num">&nbsp;2&nbsp;</span
+    ><!--
+    --><span class="tmux-win-title" onclick="show_projects_tab()"
+      >&nbsp;projects&nbsp;</span
+    >
   </footer>
 </html>
