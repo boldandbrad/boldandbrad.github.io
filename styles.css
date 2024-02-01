@@ -130,9 +130,10 @@ a:hover {
 }
 
 .cmd-ls {
-  animation: cmd-highlight 1.5s steps(1) forwards;
+  animation: cmd-highlight 1.4s steps(1) forwards;
 }
 
+.project-link,
 .project-link > a {
   color: var(--ctp-mocha-blue);
 }
