@@ -16,19 +16,25 @@
     <div class="content">
       <div id="home-tab">
         <div>
-          <span>🍎 (</span><span class="shell">zsh</span><span>) at </span
-          ><span class="cwd">~</span>
+          <span id="sys" class="sys system"></span>
+          <span class="subtext"> as </span>
+          <span class="user">guest</span>
+          <span class="subtext"> via </span>
+          <span class="shell">https</span>
+          <span class="subtext"> at </span>
+          <span class="cwd">boldandbrad.dev</span>
+          <span class="subtext"> on </span>
+          <span class="branch">~</span>
         </div>
         <div>
-          <span><i class="nf nf-cod-arrow_right prompt"></i></span>
+          <span class="prompt">-&gt; </span>
           <div class="cmd-whoami">whoami</div>
         </div>
         <div class="cmd-output">
           <div>
             <span>boldandbrad</span>
             <span class="subtext">
-              ...more like, boolean operands (get it?)</span
-            >
+              ...more like, boolean operands (get it?)</span>
           </div>
           <div>
             <p>
@@ -42,9 +48,8 @@
                 class="project-link"
                 href="https://github.com/boldandbrad/dotfiles"
                 target="_blank"
-                >dotfiles</a
-              >
-              or building new things in python 🐍 or rust 🦀.
+              >dotfiles</a>
+              or building new things in golang 🐹 or rust 🦀.
             </p>
             <p>
               In my free time I play Minecraft and board games with my partner,
@@ -62,16 +67,6 @@
                   target="_blank"
                 >
                   GitHub
-                </a>
-              </li>
-              <li class="social-link">
-                <i class="nf nf-cod-twitter"></i>
-                <a
-                  href="https://twitter.com/boldandbrad"
-                  alt="twitter"
-                  target="_blank"
-                >
-                  Twitter
                 </a>
               </li>
               <li class="social-link">
@@ -114,11 +109,18 @@
       </div>
       <div id="projects-tab">
         <div>
-          <span>🍎 (</span><span class="shell">zsh</span><span>) at </span
-          ><span class="cwd">projects</span>
+          <span id="sys" class="sys system"></span>
+          <span class="subtext"> as </span>
+          <span class="user">guest</span>
+          <span class="subtext"> via </span>
+          <span class="shell">https</span>
+          <span class="subtext"> at </span>
+          <span class="cwd">boldandbrad.dev</span>
+          <span class="subtext"> on </span>
+          <span class="branch">projects</span>
         </div>
         <div>
-          <span><i class="nf nf-cod-arrow_right prompt"></i></span>
+          <span class="prompt">-&gt; </span>
           <div class="cmd-ls--1">
             <span class="cmd-ls">ls</span>
             <span>-1</span>
@@ -127,39 +129,31 @@
         <div class="cmd-output">
           <div class="project-link">
             <a href="https://github.com/boldandbrad/euchre-cli" target="_blank"
-              >euchre-cli</a
-            >
+            >euchre-cli</a>
             <span class="subtext">- play euchre in your terminal</span>
           </div>
           <div class="project-link">
             <a href="https://github.com/boldandbrad/euchre-tui" target="_blank"
-              >euchre-tui</a
-            >
+            >euchre-tui</a>
             <span class="subtext"
-              >- tui implementation of euchre-cli in rust (wip)</span
-            >
+            >- tui implementation of euchre-cli in rust (wip)</span>
           </div>
           <div class="project-link">
             <a href="https://github.com/boldandbrad/makey-cli" target="_blank"
-              >makey-cli</a
-            >
+            >makey-cli</a>
             <span class="subtext">- make passkeys in your terminal</span>
           </div>
           <div class="project-link">
             <a href="https://github.com/boldandbrad/meeple-cli" target="_blank"
-              >meeple-cli</a
-            >
+            >meeple-cli</a>
             <span class="subtext"
-              >- manage board game collections in your terminal</span
-            >
+            >- manage board game collections in your terminal</span>
           </div>
           <div class="project-link">
             <a href="https://github.com/boldandbrad/mpl-cli" target="_blank"
-              >mpl-cli</a
-            >
+            >mpl-cli</a>
             <span class="subtext"
-              >- re-implementation of meeple-cli in rust (wip)</span
-            >
+            >- re-implementation of meeple-cli in rust (wip)</span>
           </div>
         </div>
       </div>
@@ -167,13 +161,17 @@
     <footer>
       <!-- tmux-styled nav bar -->
       <span class="nav-btn" onclick="show_home_tab()">
-        <span id="home-btn-id" class="nav-btn-id-active">&nbsp;1&nbsp;</span
-        ><span class="nav-btn-title">&nbsp;~&nbsp;</span></span
-      ><!--
-      --><span class="nav-btn" onclick="show_projects_tab()"
-        ><!--
-      --><span id="projects-btn-id" class="nav-btn-id">&nbsp;2&nbsp;</span
-        ><span class="nav-btn-title">&nbsp;projects&nbsp;</span>
+        <span id="home-btn-id" class="nav-btn-id-active"
+        >&nbsp;1&nbsp;</span><span class="nav-btn-title"
+        >&nbsp;~&nbsp;</span></span>
+      <!--
+      -->
+      <span class="nav-btn" onclick="show_projects_tab()"><!--
+      --><span
+          id="projects-btn-id"
+          class="nav-btn-id"
+        >&nbsp;2&nbsp;</span><span class="nav-btn-title"
+        >&nbsp;projects&nbsp;</span>
         <!-- TODO: add blog tab btn? -->
       </span>
     </footer>

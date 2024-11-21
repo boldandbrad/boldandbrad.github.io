@@ -65,13 +65,28 @@ a:hover {
   text-decoration: underline;
 }
 
-.shell {
+.system {
+  color: var(--ctp-mocha-red);
+  font-weight: 700;
+}
+
+.user {
   color: var(--ctp-mocha-mauve);
+  font-weight: 700;
+}
+
+.shell {
+  color: var(--ctp-mocha-lavender);
   font-weight: 700;
 }
 
 .cwd {
   color: var(--ctp-mocha-blue);
+  font-weight: 700;
+}
+
+.branch {
+  color: var(--ctp-mocha-green);
   font-weight: 700;
 }
 
@@ -101,8 +116,10 @@ a:hover {
   overflow: hidden;
   border-right: 1ch solid var(--ctp-mocha-rosewater);
   color: var(--ctp-mocha-text);
-  animation: cmd-type-6ch 1s steps(6) 1s forwards,
-    cmd-highlight 2s steps(1) forwards, cmd-enter 2.5s steps(1) forwards;
+  animation:
+    cmd-type-6ch 1s steps(6) 1s forwards,
+    cmd-highlight 2s steps(1) forwards,
+    cmd-enter 2.5s steps(1) forwards;
 }
 
 .social-link > a {
@@ -125,7 +142,8 @@ a:hover {
   overflow: hidden;
   border-right: 1ch solid var(--ctp-mocha-rosewater);
   color: var(--ctp-mocha-text);
-  animation: cmd-type-5ch 1s steps(5) 1s forwards,
+  animation:
+    cmd-type-5ch 1s steps(5) 1s forwards,
     cmd-enter 2.5s steps(1) forwards;
 }
 
