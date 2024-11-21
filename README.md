@@ -18,6 +18,10 @@ I’ve made the code open source to serve as an example for others.
 
 Open [`index.html`](index.html) in any modern web browser.
 
+## 💯 Run Tests
+
+Install deno and run `deno test`.
+
 ## 💡 Inspiration
 
 The concept and design of this site were inspired in-part by:
