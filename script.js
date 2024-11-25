@@ -1,12 +1,15 @@
-// determine user system
-document.addEventListener("DOMContentLoaded", function () {
+// add content loaded event listener
+document.addEventListener("DOMContentLoaded", userOS);
+
+// determine user operating system
+function userOS() {
   const userAgent = navigator.userAgent,
     platform = navigator.platform,
     macosPlatforms = ["Macintosh", "MacIntel", "MacPPC", "Mac68K"],
     windowsPlatforms = ["Win32", "Win64", "Windows", "WinCE"],
     iosPlatforms = ["iPhone", "iPad", "iPod"];
-  let os = "web";
 
+  let os = "web";
   if (macosPlatforms.indexOf(platform) !== -1) {
     os = "macOS";
   } else if (iosPlatforms.indexOf(platform) !== -1) {
@@ -23,11 +26,12 @@ document.addEventListener("DOMContentLoaded", function () {
   for (const elem of system_elements) {
     elem.innerHTML = os;
   }
-});
+}
 
-// add event listener
+// add key event listener
 document.addEventListener("keydown", parseKey);
 
+// parse key events
 function parseKey(e) {
   console.log("key pressed: " + e.key);
   if (e.code == "Digit1") {
