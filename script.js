@@ -1,8 +1,22 @@
-// add content loaded event listener
-document.addEventListener("DOMContentLoaded", userOS);
+// load dynamic content on page load
+onload = function () {
+  getLoadTime();
+  getSystem();
+};
+
+// calculate approximate page load time
+function getLoadTime() {
+  const [entry] = performance.getEntriesByType("navigation");
+  // console.table(entry.toJSON());
+  const loadDuration = entry.domComplete - entry.startTime;
+  const loadtime_elements = document.getElementsByClassName("loadtime");
+  for (const elem of loadtime_elements) {
+    elem.innerHTML = loadDuration.toFixed(0) + "ms";
+  }
+}
 
 // determine user operating system
-function userOS() {
+function getSystem() {
   const userAgent = navigator.userAgent,
     platform = navigator.platform,
     macosPlatforms = ["Macintosh", "MacIntel", "MacPPC", "Mac68K"],
@@ -28,10 +42,10 @@ function userOS() {
   }
 }
 
-// add key event listener
+// add key-event listener
 document.addEventListener("keydown", parseKey);
 
-// parse key events
+// parse key-events
 function parseKey(e) {
   console.log("key pressed: " + e.key);
   if (e.code == "Digit1") {
@@ -61,14 +75,14 @@ function _deactivate_tabs() {
 
 function show_home_tab() {
   document.getElementById("projects-tab").style.display = "none";
-  document.getElementById("home-tab").style.display = "block";
+  document.getElementById("home-tab").style.display = "unset";
   _deactivate_tabs();
   _activate_tab("home-btn-id");
 }
 
 function show_projects_tab() {
   document.getElementById("home-tab").style.display = "none";
-  document.getElementById("projects-tab").style.display = "block";
+  document.getElementById("projects-tab").style.display = "unset";
   _deactivate_tabs();
   _activate_tab("projects-btn-id");
 }

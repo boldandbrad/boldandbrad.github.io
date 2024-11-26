@@ -11,6 +11,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 /*----------------------------*/
+/* display size specific      */
+/*----------------------------*/
+
+.desktop {
+  display: unset;
+}
+.mobile {
+  display: none;
+}
+
+@media (max-width: 450px) {
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: unset;
+  }
+}
+
+/*----------------------------*/
 /* global styles              */
 /*----------------------------*/
 
@@ -20,6 +40,9 @@
   font-weight: 400;
   font-size: 16pt;
   color: var(--ctp-mocha-text);
+
+  /* variables */
+  --bold-weight: 700;
 }
 
 html,
@@ -35,6 +58,7 @@ body {
   bottom: 1rem;
   margin: 1rem 0 1rem 1rem;
   padding-right: 1rem;
+  width: calc(100vw - 2rem);
 }
 
 ::selection {
@@ -58,7 +82,7 @@ li {
 
 a {
   text-decoration: none;
-  font-weight: 700;
+  font-weight: var(--bold-weight);
 }
 
 a:hover {
@@ -67,27 +91,27 @@ a:hover {
 
 .system {
   color: var(--ctp-mocha-maroon);
-  font-weight: 700;
+  font-weight: var(--bold-weight);
 }
 
 .user {
   color: var(--ctp-mocha-mauve);
-  font-weight: 700;
+  font-weight: var(--bold-weight);
 }
 
 .shell {
   color: var(--ctp-mocha-lavender);
-  font-weight: 700;
+  font-weight: var(--bold-weight);
 }
 
 .cwd {
   color: var(--ctp-mocha-blue);
-  font-weight: 700;
+  font-weight: var(--bold-weight);
 }
 
 .branch {
   color: var(--ctp-mocha-green);
-  font-weight: 700;
+  font-weight: var(--bold-weight);
 }
 
 .prompt {
@@ -103,9 +127,21 @@ a:hover {
   color: var(--ctp-mocha-surface2);
 }
 
+.loadtime {
+  color: var(--ctp-mocha-yellow);
+}
+
+.right {
+  float: inline-end;
+}
+
 /*----------------------------*/
 /* home tab                   */
 /*----------------------------*/
+
+#home-tab {
+  display: unset;
+}
 
 .cmd-whoami {
   display: inline-block;
@@ -188,6 +224,15 @@ footer {
 
 .nav-btn-title {
   background: var(--ctp-mocha-surface0);
+}
+
+.nav-msg {
+  float: inline-end;
+  color: var(--ctp-mocha-surface2);
+}
+
+.nav-msg-link {
+  color: var(--ctp-mocha-lavender);
 }
 
 /*----------------------------*/
