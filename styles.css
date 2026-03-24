@@ -7,8 +7,8 @@
 /* import Catppuccin theme */
 @import url("https://unpkg.com/@catppuccin/palette/css/catppuccin.css");
 
-/* import Anonymous Pro typeface */
-@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+/* import typeface */
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 /*----------------------------*/
 /* display size specific      */
@@ -36,9 +36,8 @@
 
 :root {
   background: var(--ctp-mocha-base);
-  font-family: "Anonymous Pro", monospace;
+  font-family: "Space Mono", monospace;
   font-weight: 400;
-  font-size: 16pt;
   color: var(--ctp-mocha-text);
 
   /* variables */
@@ -145,7 +144,7 @@ a:hover {
 
 .cmd-whoami {
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: bottom;
   width: 0;
   white-space: nowrap;
   overflow: hidden;
@@ -171,7 +170,7 @@ a:hover {
 
 .cmd-ls--1 {
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: bottom;
   width: 0;
   white-space: nowrap;
   overflow: hidden;
